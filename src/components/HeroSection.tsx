@@ -9,7 +9,7 @@ const HeroSection = () => {
   const [successRate, setSuccessRate] = useState(0);
   const [projectsCount, setProjectsCount] = useState(0);
 
-  const fullText = "Создай прибыльный бизнес с нуля за 90 дней";
+  const fullText = "Как избежать 20 млн долгов в бизнесе";
 
   useEffect(() => {
     let i = 0;
@@ -27,9 +27,9 @@ const HeroSection = () => {
 
   useEffect(() => {
     const counters = [
-      { setter: setStudentCount, target: 2847, duration: 2000 },
-      { setter: setSuccessRate, target: 94, duration: 2000 },
-      { setter: setProjectsCount, target: 156, duration: 2000 }
+      { setter: setStudentCount, target: 20, duration: 2000 },
+      { setter: setSuccessRate, target: 8, duration: 2000 },
+      { setter: setProjectsCount, target: 6, duration: 2000 }
     ];
 
     counters.forEach(({ setter, target, duration }) => {
@@ -61,8 +61,8 @@ const HeroSection = () => {
           {/* Left content */}
           <div className="text-center lg:text-left">
             <div className="mb-6">
-              <span className="inline-block px-6 py-2 bg-primary/20 text-primary-foreground rounded-full text-sm font-medium border border-primary/30 glow">
-                🚀 Новый поток стартует через 7 дней
+              <span className="inline-block px-6 py-2 bg-destructive/20 text-destructive border-2 border-destructive rounded-full text-sm font-bold glow">
+                ⚠️ Курс от банкрота для предпринимателей
               </span>
             </div>
             
@@ -71,20 +71,20 @@ const HeroSection = () => {
               <span className="animate-pulse">|</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Пошаговая система запуска бизнеса от ментора, который помог 
-              <span className="text-primary font-bold"> 2800+ студентам </span>
-              создать прибыльные проекты
+            <p className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-medium">
+              От идеи до первой прибыли без розовых очков и мотивационного мусора: научу 
+              избегать ошибок, которые стоили мне 
+              <span className="text-primary font-black text-2xl md:text-3xl"> полгода финансового ада</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="btn-hero text-lg px-8 py-6 h-auto">
-                Начать обучение
+              <Button size="lg" className="btn-hero text-lg px-8 py-6 h-auto bg-primary hover:bg-primary-dark text-white border-2 border-primary">
+                Забронировать место
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-primary/30 hover:bg-primary/10">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background">
                 <Play className="mr-2 h-5 w-5" />
-                Смотреть демо
+                Моя история
               </Button>
             </div>
 
@@ -92,21 +92,21 @@ const HeroSection = () => {
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-black text-primary mb-2">
-                  {studentCount.toLocaleString()}+
+                  {studentCount} млн ₽
                 </div>
-                <div className="text-sm text-muted-foreground">Выпускников</div>
+                <div className="text-sm text-foreground font-medium">Долгов было</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-black text-secondary mb-2">
-                  {successRate}%
+                  {successRate} мес
                 </div>
-                <div className="text-sm text-muted-foreground">Успех</div>
+                <div className="text-sm text-foreground font-medium">Восстановления</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-black text-accent mb-2">
-                  {projectsCount}+
+                  {projectsCount} → 2
                 </div>
-                <div className="text-sm text-muted-foreground">Проектов</div>
+                <div className="text-sm text-foreground font-medium">Барбершопов</div>
               </div>
             </div>
           </div>
@@ -115,36 +115,36 @@ const HeroSection = () => {
           <div className="relative">
             {/* 3D floating metrics cards */}
             <div className="absolute inset-0">
-              <div className="absolute top-0 right-0 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float">
+              <div className="absolute top-0 right-0 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float border border-primary/30">
                 <div className="flex items-center mb-2">
                   <Users className="h-6 w-6 text-primary mr-2" />
-                  <span className="text-sm font-medium">Активные студенты</span>
+                  <span className="text-sm font-bold text-foreground">Банковская карьера</span>
                 </div>
-                <div className="text-2xl font-black text-primary">847</div>
+                <div className="text-2xl font-black text-primary">15 лет</div>
               </div>
 
-              <div className="absolute top-32 left-0 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float" style={{ animationDelay: '1s' }}>
+              <div className="absolute top-32 left-0 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float border border-secondary/30" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center mb-2">
                   <Trophy className="h-6 w-6 text-secondary mr-2" />
-                  <span className="text-sm font-medium">Средний доход</span>
+                  <span className="text-sm font-bold text-foreground">Барбершопов было</span>
                 </div>
-                <div className="text-2xl font-black text-secondary">₽280K</div>
+                <div className="text-2xl font-black text-secondary">6 + 2</div>
               </div>
 
-              <div className="absolute bottom-0 right-8 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float" style={{ animationDelay: '2s' }}>
+              <div className="absolute bottom-0 right-8 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float border border-accent/30" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center mb-2">
                   <Target className="h-6 w-6 text-accent mr-2" />
-                  <span className="text-sm font-medium">Запущено за месяц</span>
+                  <span className="text-sm font-bold text-foreground">Проектов BigData</span>
                 </div>
-                <div className="text-2xl font-black text-accent">23 проекта</div>
+                <div className="text-2xl font-black text-accent">≈10</div>
               </div>
 
-              <div className="absolute top-64 right-32 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float pulse-glow" style={{ animationDelay: '3s' }}>
+              <div className="absolute top-64 right-32 w-48 h-32 bg-gradient-card rounded-2xl p-6 card-3d glow-hover float pulse-glow border border-warning/30" style={{ animationDelay: '3s' }}>
                 <div className="flex items-center mb-2">
                   <Zap className="h-6 w-6 text-warning mr-2" />
-                  <span className="text-sm font-medium">Быстрый старт</span>
+                  <span className="text-sm font-bold text-foreground">Директор в ГПБ</span>
                 </div>
-                <div className="text-2xl font-black text-warning">7 дней</div>
+                <div className="text-2xl font-black text-warning">2019</div>
               </div>
             </div>
 

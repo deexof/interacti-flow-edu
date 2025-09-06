@@ -6,49 +6,49 @@ const AboutInstructor = () => {
 
   const timeline = [
     {
-      year: "2015",
-      title: "Первый бизнес",
-      company: "Digital Agency",
-      description: "Запустил веб-студию с оборотом ₽2M в первый год",
-      achievement: "₽2M оборот",
+      year: "2005-2019",
+      title: "Банковская карьера",
+      company: "Топ-5 банков России",
+      description: "От программиста до директора по развитию в Газпромбанке",
+      achievement: "15 лет опыта",
       icon: Building,
-      details: "Начал с команды из 3 человек, создавал сайты для малого бизнеса. За год вырос до 15 сотрудников и крупных корпоративных клиентов."
-    },
-    {
-      year: "2017",
-      title: "Масштабирование",
-      company: "Tech Solutions Group",
-      description: "Создал экосистему из 5 компаний в разных нишах",
-      achievement: "5 компаний",
-      icon: TrendingUp,
-      details: "Диверсифицировал бизнес: e-commerce, EdTech, FinTech, недвижимость и консалтинг. Общий оборот превысил ₽50M."
+      details: "Работал программистом в мобильной связи, бизнес-аналитиком в трех банках топ-5, дослужился до директора по развитию в ГПБ. Реализовал с десяток проектов BigData и AI с бюджетами в миллиарды рублей."
     },
     {
       year: "2019",
-      title: "Международный выход",
-      company: "Global Ventures",
-      description: "Вышел на рынки США и Европы",
-      achievement: "3 страны",
+      title: "Начало предпринимательства",
+      company: "Barber Business",
+      description: "Запустил сетку барбершопов в Москве",
+      achievement: "6 + 2 филиала",
+      icon: TrendingUp,
+      details: "Создал 6 собственных барбершопов и 2 франшизы в Москве. Активно развивал бизнес, не подозревая о грядущих проблемах."
+    },
+    {
+      year: "2025 Начало",
+      title: "Финансовый крах",
+      company: "Crisis Point",
+      description: "Накопленные проблемы привели к долгам в 20 млн ₽",
+      achievement: "20 млн долгов",
       icon: Globe,
-      details: "Открыл офисы в Нью-Йорке и Берлине. Привлек $2M инвестиций от международных фондов."
+      details: "Полгода финансового ада. Из шести заведений осталось только два. Никто не учил, как падать и подниматься."
     },
     {
-      year: "2021",
-      title: "Ментор и инвестор",
-      company: "Business Academy",
-      description: "Начал обучать предпринимателей своей системе",
-      achievement: "500+ студентов",
+      year: "2025",
+      title: "Восстановление",
+      company: "Recovery Phase",
+      description: "За 8 месяцев разобрался с долгами и восстановил бизнес",
+      achievement: "8 месяцев",
       icon: Users,
-      details: "Создал первый курс по запуску бизнеса. 94% выпускников запустили прибыльные проекты в первые 6 месяцев."
+      details: "Взялся за голову и методично раскидался с долгами. Понял, что мой опыт падения и восстановления может помочь другим предпринимателям избежать моих ошибок."
     },
     {
-      year: "2023",
-      title: "Топ-эксперт",
-      company: "Industry Leader",
-      description: "Признан лучшим бизнес-ментором России",
-      achievement: "2800+ выпускников",
+      year: "Сейчас",
+      title: "Ментор по кризисам",
+      company: "Anti-Crisis Mentor",
+      description: "Обучаю не только на победах, но и на поражениях",
+      achievement: "Реальный опыт",
       icon: Award,
-      details: "Получил премию 'Предприниматель года'. Студенты запустили проекты на общую сумму ₽1.2 млрд."
+      details: "Решил стать человеком, который поможет. Не бывает курсов о том, как падать и подниматься. Если готов учиться не только на победах — добро пожаловать."
     }
   ];
 
@@ -59,9 +59,9 @@ const AboutInstructor = () => {
           <h2 className="text-4xl md:text-6xl font-black mb-6">
             <span className="gradient-text">Об авторе курса</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Александр Петров — серийный предприниматель с 8-летним опытом, 
-            который помог 2800+ студентам создать успешный бизнес
+          <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
+            Роман — экс-директор Газпромбанка, который прошел путь от банкротства до восстановления
+            и готов поделиться реальным опытом без розовых очков
           </p>
         </div>
 
@@ -77,21 +77,21 @@ const AboutInstructor = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="bg-gradient-card p-6 rounded-2xl border border-border/20 glow-hover">
-                <div className="text-3xl font-black text-primary mb-2">8+</div>
-                <div className="text-sm text-muted-foreground">Лет в бизнесе</div>
+              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-primary/30 glow-hover">
+                <div className="text-3xl font-black text-primary mb-2">15</div>
+                <div className="text-sm text-foreground font-bold">Лет в банках</div>
               </div>
-              <div className="bg-gradient-card p-6 rounded-2xl border border-border/20 glow-hover">
-                <div className="text-3xl font-black text-secondary mb-2">₽1.2B</div>
-                <div className="text-sm text-muted-foreground">Оборот студентов</div>
+              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-secondary/30 glow-hover">
+                <div className="text-3xl font-black text-secondary mb-2">20М ₽</div>
+                <div className="text-sm text-foreground font-bold">Долгов было</div>
               </div>
-              <div className="bg-gradient-card p-6 rounded-2xl border border-border/20 glow-hover">
-                <div className="text-3xl font-black text-accent mb-2">2800+</div>
-                <div className="text-sm text-muted-foreground">Выпускников</div>
+              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-accent/30 glow-hover">
+                <div className="text-3xl font-black text-accent mb-2">8</div>
+                <div className="text-sm text-foreground font-bold">Месяцев восстановления</div>
               </div>
-              <div className="bg-gradient-card p-6 rounded-2xl border border-border/20 glow-hover">
-                <div className="text-3xl font-black text-success mb-2">94%</div>
-                <div className="text-sm text-muted-foreground">Успешных запусков</div>
+              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-success/30 glow-hover">
+                <div className="text-3xl font-black text-success mb-2">34</div>
+                <div className="text-sm text-foreground font-bold">Года опыта</div>
               </div>
             </div>
           </div>
