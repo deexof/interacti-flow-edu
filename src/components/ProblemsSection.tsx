@@ -54,21 +54,41 @@ const ProblemsSection = () => {
             <div key={index} className="flip-card h-80">
               <div className="flip-card-inner">
                 {/* Front */}
-                <div className="flip-card-front bg-gradient-card p-8 flex flex-col items-center text-center border border-border/20">
-                  <div className={`w-16 h-16 rounded-full bg-${problem.color}/20 flex items-center justify-center mb-6 glow-hover`}>
-                    <problem.icon className={`h-8 w-8 text-${problem.color}`} />
+                <div className="flip-card-front bg-card p-8 flex flex-col items-center text-center border">
+                  <div className={`w-16 h-16 rounded-full ${
+                    problem.color === 'destructive' ? 'bg-destructive/10' :
+                    problem.color === 'warning' ? 'bg-warning/10' :
+                    problem.color === 'accent' ? 'bg-accent/10' :
+                    'bg-secondary/10'
+                  } flex items-center justify-center mb-6`}>
+                    <problem.icon className={`h-8 w-8 ${
+                      problem.color === 'destructive' ? 'text-destructive' :
+                      problem.color === 'warning' ? 'text-warning' :
+                      problem.color === 'accent' ? 'text-accent' :
+                      'text-secondary'
+                    }`} />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{problem.title}</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-foreground">{problem.title}</h3>
                   <p className="text-muted-foreground mb-6">{problem.description}</p>
-                  <div className={`text-3xl font-black text-${problem.color}`}>
+                  <div className={`text-2xl font-bold ${
+                    problem.color === 'destructive' ? 'text-destructive' :
+                    problem.color === 'warning' ? 'text-warning' :
+                    problem.color === 'accent' ? 'text-accent' :
+                    'text-secondary'
+                  }`}>
                     {problem.stat}
                   </div>
                 </div>
 
                 {/* Back */}
-                <div className={`flip-card-back bg-gradient-${problem.color} p-8 flex flex-col justify-center text-center`}>
-                  <h3 className="text-xl font-bold mb-4 text-white">Решение проблемы</h3>
-                  <p className="text-white/90 leading-relaxed">
+                <div className={`flip-card-back p-8 flex flex-col justify-center text-center ${
+                  problem.color === 'destructive' ? 'bg-destructive text-destructive-foreground' :
+                  problem.color === 'warning' ? 'bg-warning text-warning-foreground' :
+                  problem.color === 'accent' ? 'bg-accent text-accent-foreground' :
+                  'bg-secondary text-secondary-foreground'
+                }`}>
+                  <h3 className="text-xl font-semibold mb-4">Как решить</h3>
+                  <p className="leading-relaxed opacity-90">
                     {problem.backContent}
                   </p>
                 </div>
