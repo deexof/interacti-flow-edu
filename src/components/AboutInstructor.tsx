@@ -7,48 +7,48 @@ const AboutInstructor = () => {
   const timeline = [
     {
       year: "2005-2019",
-      title: "Банковская карьера",
-      company: "Топ-5 банков России",
-      description: "От программиста до директора по развитию в Газпромбанке",
-      achievement: "15 лет опыта",
+      title: "Работал в банках",
+      company: "От программиста до директора",
+      description: "Прошел путь от обычного программиста до директора по развитию в Газпромбанке",
+      achievement: "15 лет карьеры",
       icon: Building,
-      details: "Работал программистом в мобильной связи, бизнес-аналитиком в трех банках топ-5, дослужился до директора по развитию в ГПБ. Реализовал с десяток проектов BigData и AI с бюджетами в миллиарды рублей."
+      details: "Честно говоря, думал, что знаю всё о бизнесе. Работал программистом в мобильной связи, потом бизнес-аналитиком в трех банках топ-5. Дослужился до директора по развитию в ГПБ. Реализовал десяток проектов BigData с миллиардными бюджетами. Казалось, что предпринимательство — это легко."
     },
     {
       year: "2019",
-      title: "Начало предпринимательства",
-      company: "Barber Business",
-      description: "Запустил сетку барбершопов в Москве",
-      achievement: "6 + 2 филиала",
+      title: "Запустил свое дело",
+      company: "Барбершопы в Москве",
+      description: "Открыл сеть барбершопов, был уверен в успехе",
+      achievement: "8 заведений",
       icon: TrendingUp,
-      details: "Создал 6 собственных барбершопов и 2 франшизы в Москве. Активно развивал бизнес, не подозревая о грядущих проблемах."
+      details: "Решил, что банковский опыт поможет мне в бизнесе. Создал 6 собственных барбершопов и 2 франшизы в Москве. Активно развивался, вкладывался, верил в проект. Думал, что понимаю рынок."
     },
     {
       year: "2025 Начало",
-      title: "Финансовый крах",
-      company: "Crisis Point",
-      description: "Накопленные проблемы привели к долгам в 20 млн ₽",
+      title: "Всё рухнуло",
+      company: "Финансовый крах",
+      description: "Накопленные ошибки привели к долгам в 20 млн рублей",
       achievement: "20 млн долгов",
       icon: Globe,
-      details: "Полгода финансового ада. Из шести заведений осталось только два. Никто не учил, как падать и подниматься."
+      details: "Полгода финансового ада. Из шести заведений осталось только два. Оказалось, что банковский опыт совсем не равен предпринимательскому. Никто не учил, как падать и как потом подниматься. Было очень страшно."
     },
     {
       year: "2025",
-      title: "Восстановление",
-      company: "Recovery Phase",
-      description: "За 8 месяцев разобрался с долгами и восстановил бизнес",
-      achievement: "8 месяцев",
+      title: "Восстанавливался",
+      company: "Работа над ошибками",
+      description: "За 8 месяцев разобрался с долгами и понял свои ошибки",
+      achievement: "8 месяцев работы",
       icon: Users,
-      details: "Взялся за голову и методично раскидался с долгами. Понял, что мой опыт падения и восстановления может помочь другим предпринимателям избежать моих ошибок."
+      details: "Взялся за голову и методично разбирался с долгами. Понял, что мой опыт падения не менее ценен, чем опыт побед. Решил поделиться этим с другими предпринимателями, чтобы они не наступали на те же грабли."
     },
     {
       year: "Сейчас",
-      title: "Ментор по кризисам",
-      company: "Anti-Crisis Mentor",
-      description: "Обучаю не только на победах, но и на поражениях",
-      achievement: "Реальный опыт",
+      title: "Делюсь опытом",
+      company: "Обучаю реальности",
+      description: "Учу не только побеждать, но и падать правильно",
+      achievement: "Без розовых очков",
       icon: Award,
-      details: "Решил стать человеком, который поможет. Не бывает курсов о том, как падать и подниматься. Если готов учиться не только на победах — добро пожаловать."
+      details: "Решил стать тем человеком, к которому можно прийти за помощью. Не бывает курсов о том, как правильно падать и подниматься. Если готовы учиться не только на победах — добро пожаловать."
     }
   ];
 
@@ -56,12 +56,11 @@ const AboutInstructor = () => {
     <section className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-6">
-            <span className="gradient-text">Об авторе курса</span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+            Моя история
           </h2>
-          <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-            Роман — экс-директор Газпромбанка, который прошел путь от банкротства до восстановления
-            и готов поделиться реальным опытом без розовых очков
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Я не гуру мотивации. Я обычный человек, который совершил кучу ошибок и готов рассказать о них честно.
           </p>
         </div>
 
@@ -70,28 +69,28 @@ const AboutInstructor = () => {
           <div className="text-center lg:text-left">
             <div className="relative mb-8">
               {/* Instructor photo placeholder */}
-              <div className="w-80 h-80 mx-auto lg:mx-0 bg-gradient-primary rounded-3xl glow-hover card-3d" />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-accent rounded-2xl flex items-center justify-center card-3d">
-                <Briefcase className="h-8 w-8 text-accent-foreground" />
+              <div className="w-80 h-80 mx-auto lg:mx-0 bg-gradient-card rounded-2xl shadow-md border" />
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-sm">
+                <Briefcase className="h-6 w-6 text-primary-foreground" />
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-primary/30 glow-hover">
-                <div className="text-3xl font-black text-primary mb-2">15</div>
-                <div className="text-sm text-foreground font-bold">Лет в банках</div>
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="bg-card p-4 rounded-xl border shadow-sm">
+                <div className="text-2xl font-bold text-primary mb-1">15</div>
+                <div className="text-sm text-muted-foreground">Лет в банках</div>
               </div>
-              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-secondary/30 glow-hover">
-                <div className="text-3xl font-black text-secondary mb-2">20М ₽</div>
-                <div className="text-sm text-foreground font-bold">Долгов было</div>
+              <div className="bg-card p-4 rounded-xl border shadow-sm">
+                <div className="text-2xl font-bold text-destructive mb-1">20М ₽</div>
+                <div className="text-sm text-muted-foreground">Потерял</div>
               </div>
-              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-accent/30 glow-hover">
-                <div className="text-3xl font-black text-accent mb-2">8</div>
-                <div className="text-sm text-foreground font-bold">Месяцев восстановления</div>
+              <div className="bg-card p-4 rounded-xl border shadow-sm">
+                <div className="text-2xl font-bold text-accent mb-1">8</div>
+                <div className="text-sm text-muted-foreground">Месяцев восстановления</div>
               </div>
-              <div className="bg-gradient-card p-6 rounded-2xl border-2 border-success/30 glow-hover">
-                <div className="text-3xl font-black text-success mb-2">34</div>
-                <div className="text-sm text-foreground font-bold">Года опыта</div>
+              <div className="bg-card p-4 rounded-xl border shadow-sm">
+                <div className="text-2xl font-bold text-success mb-1">34</div>
+                <div className="text-sm text-muted-foreground">Года мне</div>
               </div>
             </div>
           </div>
@@ -108,24 +107,24 @@ const AboutInstructor = () => {
                   onClick={() => setActiveYear(index)}
                 >
                   <div className="timeline-dot" />
-                  <div className="bg-gradient-card p-6 rounded-2xl border border-border/20 glow-hover">
+                  <div className="bg-card p-6 rounded-xl border transition-all duration-200 hover:shadow-md">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                        <item.icon className="h-6 w-6 text-primary" />
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <item.icon className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <div className="text-sm text-primary font-bold">{item.year}</div>
-                        <div className="font-bold text-lg">{item.title}</div>
+                        <div className="text-sm text-primary font-medium">{item.year}</div>
+                        <div className="font-semibold text-lg">{item.title}</div>
                       </div>
                       <div className="ml-auto text-right">
                         <div className="text-sm text-muted-foreground">{item.company}</div>
-                        <div className="text-sm font-bold text-accent">{item.achievement}</div>
+                        <div className="text-sm font-medium text-accent">{item.achievement}</div>
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-4">{item.description}</p>
                     
                     {activeYear === index && (
-                      <div className="bg-muted/50 p-4 rounded-xl border-l-4 border-primary animate-in slide-in-from-left-2">
+                      <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-primary animate-in slide-in-from-left-2">
                         <p className="text-sm leading-relaxed">{item.details}</p>
                       </div>
                     )}
@@ -136,24 +135,24 @@ const AboutInstructor = () => {
           </div>
         </div>
 
-        {/* Awards section */}
-        <div className="mt-16 bg-gradient-card p-8 rounded-3xl border border-border/20">
-          <h3 className="text-2xl font-bold text-center mb-8">Награды и достижения</h3>
+        {/* Simple achievement section */}
+        <div className="mt-16 bg-card p-8 rounded-2xl border shadow-sm">
+          <h3 className="text-xl font-semibold text-center mb-6">Что обо мне говорят</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-muted/20 rounded-2xl">
-              <Award className="h-12 w-12 text-warning mx-auto mb-4" />
-              <div className="font-bold mb-2">Предприниматель года 2023</div>
-              <div className="text-sm text-muted-foreground">Премия Business Awards</div>
+            <div className="text-center p-4 bg-muted/20 rounded-xl">
+              <Award className="h-8 w-8 text-primary mx-auto mb-3" />
+              <div className="font-medium mb-1">Откровенный подход</div>
+              <div className="text-sm text-muted-foreground">Говорю как есть, без прикрас</div>
             </div>
-            <div className="text-center p-6 bg-muted/20 rounded-2xl">
-              <Users className="h-12 w-12 text-success mx-auto mb-4" />
-              <div className="font-bold mb-2">Лучший бизнес-ментор</div>
-              <div className="text-sm text-muted-foreground">Рейтинг Forbes 2023</div>
+            <div className="text-center p-4 bg-muted/20 rounded-xl">
+              <Users className="h-8 w-8 text-accent mx-auto mb-3" />
+              <div className="font-medium mb-1">Реальный опыт</div>
+              <div className="text-sm text-muted-foreground">Прошел через кризис сам</div>
             </div>
-            <div className="text-center p-6 bg-muted/20 rounded-2xl">
-              <TrendingUp className="h-12 w-12 text-primary mx-auto mb-4" />
-              <div className="font-bold mb-2">Топ-10 стартап инвесторов</div>
-              <div className="text-sm text-muted-foreground">Venture Capital Rating</div>
+            <div className="text-center p-4 bg-muted/20 rounded-xl">
+              <TrendingUp className="h-8 w-8 text-success mx-auto mb-3" />
+              <div className="font-medium mb-1">Практические решения</div>
+              <div className="text-sm text-muted-foreground">Только то, что работает</div>
             </div>
           </div>
         </div>
