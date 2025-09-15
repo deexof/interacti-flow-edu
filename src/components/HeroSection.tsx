@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Users, Trophy, Target, Zap, Search, Eye } from "lucide-react";
+import { ArrowRight, Search, Eye, TrendingUp, TrendingDown, DollarSign } from "lucide-react";
 import heroImage from "@/assets/hero-entrepreneur.jpg";
 import CrimeTape from "./CrimeTape";
 import EvidenceTag from "./EvidenceTag";
+import BusinessMetrics from "./BusinessMetrics";
 
 const HeroSection = () => {
   const [typewriterText, setTypewriterText] = useState("");
@@ -49,87 +50,137 @@ const HeroSection = () => {
     });
   }, []);
 
+  // Sample data for charts
+  const recoveryData = [
+    { month: 'Янв', value: -20 },
+    { month: 'Фев', value: -18 },
+    { month: 'Мар', value: -12 },
+    { month: 'Апр', value: -5 },
+    { month: 'Май', value: 2 },
+    { month: 'Июн', value: 8 },
+    { month: 'Июл', value: 15 },
+    { month: 'Авг', value: 20 },
+  ];
+
+  const lossData = [
+    { month: 'Q1', value: 5 },
+    { month: 'Q2', value: 12 },
+    { month: 'Q3', value: 18 },
+    { month: 'Q4', value: 20 },
+  ];
+
+  const growthData = [
+    { month: 'M1', value: 0 },
+    { month: 'M2', value: 2 },
+    { month: 'M3', value: 5 },
+    { month: 'M4', value: 10 },
+    { month: 'M5', value: 18 },
+    { month: 'M6', value: 25 },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Scanner lines effect */}
-      <div className="scanner-lines absolute inset-0 opacity-30"></div>
+      {/* Scanner lines effect - more subtle */}
+      <div className="scanner-lines absolute inset-0 opacity-10"></div>
       
-      {/* Crime tape at top */}
-      <div className="absolute top-8 left-0 right-0 z-20">
-        <CrimeTape text="⚠ РАССЛЕДОВАНИЕ ВЕДЕТСЯ - НЕ ПРОХОДИТЬ ⚠" />
+      {/* Crime tape at top - refined */}
+      <div className="absolute top-12 left-0 right-0 z-20">
+        <CrimeTape text="⚠ ДЕЛО ЗАКРЫТО: УСПЕШНОЕ ВОССТАНОВЛЕНИЕ ⚠" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <EvidenceTag number="001" className="text-sm">
-              СВИДЕТЕЛЬСКИЕ ПОКАЗАНИЯ
-            </EvidenceTag>
-          </div>
-          
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-foreground gradient-text neon-flicker">
-            {typewriterText}
-            <span className="animate-pulse text-primary">█</span>
-          </h1>
-          
-          <div className="relative mb-12">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto bg-card/50 p-6 rounded-lg border border-primary/30 backdrop-blur-sm">
-              <span className="text-primary font-bold">ПРОТОКОЛ ДОПРОСА:</span><br/>
-              Меня зовут Роман. Мне 34. Я был директором в Газпромбанке, построил сеть барбершопов, 
-              потерял 20 млн рублей и восстановился за 8 месяцев. 
-              <span className="text-accent font-semibold pulse-glow"> Вещдоки прилагаются.</span>
-            </p>
-            <div className="evidence-marker absolute -top-2 -right-2"></div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-6 mb-16 justify-center">
-            <Button variant="neon" size="lg" className="text-lg px-8 py-6 h-auto">
-              <Search className="mr-2 h-5 w-5" />
-              НАЧАТЬ РАССЛЕДОВАНИЕ
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="evidence" size="lg" className="text-lg px-8 py-6 h-auto">
-              <Eye className="mr-2 h-5 w-5" />
-              ИЗУЧИТЬ УЛИКИ
-            </Button>
-          </div>
-
-          {/* Investigation Stats */}
-          <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="text-center bg-card/80 p-6 rounded-xl border border-primary/50 glow-hover card-3d backdrop-blur-sm">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2 pulse-glow">
-                {studentCount} млн ₽
-              </div>
-              <div className="text-sm text-muted-foreground font-mono">РАЗМЕР УЩЕРБА</div>
-              <div className="w-full h-1 bg-primary/20 mt-2 rounded-full">
-                <div className="h-full bg-gradient-primary rounded-full animate-[scan_2s_linear_infinite]" style={{width: '100%'}}></div>
-              </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-8">
+              <EvidenceTag number="001" className="text-sm">
+                ФИНАНСОВОЕ РАССЛЕДОВАНИЕ
+              </EvidenceTag>
             </div>
-            <div className="text-center bg-card/80 p-6 rounded-xl border border-secondary/50 glow-pink card-3d backdrop-blur-sm">
-              <div className="text-2xl md:text-3xl font-bold text-secondary mb-2 pulse-glow">
-                {successRate} мес
-              </div>
-              <div className="text-sm text-muted-foreground font-mono">ВРЕМЯ ВОССТАНОВЛЕНИЯ</div>
-              <div className="w-full h-1 bg-secondary/20 mt-2 rounded-full">
-                <div className="h-full bg-gradient-secondary rounded-full animate-[scan_2s_linear_infinite_0.5s]" style={{width: '100%'}}></div>
-              </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight gradient-text neon-flicker">
+              {typewriterText}
+              <span className="animate-pulse text-primary">█</span>
+            </h1>
+            
+            <div className="relative mb-12">
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto bg-card/30 p-8 rounded-lg border border-primary/20 backdrop-blur-sm">
+                <span className="text-primary font-bold">ЗАКЛЮЧЕНИЕ ЭКСПЕРТА:</span><br/>
+                Роман, 34 года, экс-директор Газпромбанка. Потерял 20 млн на барбершопах, 
+                восстановился за 8 месяцев. 
+                <span className="text-secondary font-semibold"> Методы восстановления задокументированы.</span>
+              </p>
+              <div className="evidence-marker absolute -top-3 -right-3"></div>
             </div>
-            <div className="text-center bg-card/80 p-6 rounded-xl border border-accent/50 glow-yellow card-3d backdrop-blur-sm">
-              <div className="text-2xl md:text-3xl font-bold text-accent mb-2 pulse-glow">
-                15 лет
-              </div>
-              <div className="text-sm text-muted-foreground font-mono">ОПЫТ В БАНКАХ</div>
-              <div className="w-full h-1 bg-accent/20 mt-2 rounded-full">
-                <div className="h-full bg-gradient-accent rounded-full animate-[scan_2s_linear_infinite_1s]" style={{width: '100%'}}></div>
-              </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 mb-16 justify-center">
+              <Button variant="neon" size="lg" className="text-xl px-10 py-8 h-auto">
+                <Search className="mr-3 h-6 w-6" />
+                ИЗУЧИТЬ СЛУЧАЙ
+                <ArrowRight className="ml-3 h-6 w-6" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-xl px-10 py-8 h-auto">
+                <Eye className="mr-3 h-6 w-6" />
+                АНАЛИЗ ДАННЫХ
+              </Button>
             </div>
           </div>
 
-          {/* Evidence collection notice */}
-          <div className="mt-12 text-center">
-            <div className="inline-block bg-muted/50 border border-primary/30 rounded-lg p-4 backdrop-blur-sm">
-              <p className="text-sm text-muted-foreground font-mono">
-                🔍 СТАТУС: АКТИВНОЕ РАССЛЕДОВАНИЕ | 📂 УЛИКИ: СОБРАНЫ | ⚖️ ВЕРДИКТ: В ПРОЦЕССЕ
+          {/* Business Analytics Charts */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 mb-4">
+                <TrendingDown className="h-6 w-6 text-destructive" />
+                <h3 className="text-lg font-semibold">Динамика потерь</h3>
+              </div>
+              <BusinessMetrics 
+                type="loss" 
+                title="УБЫТКИ ПО КВАРТАЛАМ"
+                data={lossData}
+              />
+              <div className="text-center">
+                <div className="text-3xl font-bold text-destructive mb-1">-20 млн ₽</div>
+                <div className="text-sm text-muted-foreground font-mono">ОБЩИЙ УЩЕРБ</div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 mb-4">
+                <TrendingUp className="h-6 w-6 text-secondary" />
+                <h3 className="text-lg font-semibold">Восстановление</h3>
+              </div>
+              <BusinessMetrics 
+                type="recovery" 
+                title="ФИНАНСОВОЕ ВОССТАНОВЛЕНИЕ"
+                data={recoveryData}
+              />
+              <div className="text-center">
+                <div className="text-3xl font-bold text-secondary mb-1">8 месяцев</div>
+                <div className="text-sm text-muted-foreground font-mono">ВРЕМЯ ВОССТАНОВЛЕНИЯ</div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 mb-4">
+                <DollarSign className="h-6 w-6 text-primary" />
+                <h3 className="text-lg font-semibold">Новый рост</h3>
+              </div>
+              <BusinessMetrics 
+                type="growth" 
+                title="РОСТ ПОСЛЕ ВОССТАНОВЛЕНИЯ"
+                data={growthData}
+              />
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-1">+25 млн ₽</div>
+                <div className="text-sm text-muted-foreground font-mono">НОВАЯ ПРИБЫЛЬ</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Case Status */}
+          <div className="text-center">
+            <div className="inline-block bg-card/50 border border-primary/20 rounded-lg p-6 backdrop-blur-sm">
+              <p className="text-lg text-muted-foreground font-mono">
+                📊 СТАТУС ДЕЛА: ЗАКРЫТО | 🎯 РЕЗУЛЬТАТ: УСПЕХ | 📈 МЕТОДЫ: ПРОВЕРЕНЫ
               </p>
             </div>
           </div>

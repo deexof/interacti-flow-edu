@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-neon-green",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-neon-pink",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        outline: "border border-primary/30 bg-background/50 hover:bg-primary/10 hover:text-primary backdrop-blur-sm",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
+        ghost: "hover:bg-accent/10 hover:text-accent",
         link: "text-primary underline-offset-4 hover:underline",
         neon: "btn-hero",
         evidence: "btn-evidence",
-        investigation: "bg-evidence text-evidence-foreground hover:bg-evidence/90 shadow-neon-cyan border-2 border-evidence",
-        clue: "bg-clue text-clue-foreground hover:bg-clue/90 shadow-neon-pink border-2 border-clue",
+        investigation: "bg-evidence/10 text-evidence border border-evidence/30 hover:bg-evidence/20 backdrop-blur-sm",
+        clue: "bg-clue/10 text-clue border border-clue/30 hover:bg-clue/20 backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",
