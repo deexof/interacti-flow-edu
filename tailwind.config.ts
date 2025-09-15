@@ -35,9 +35,13 @@ export default {
           foreground: "hsl(var(--accent-foreground))",
           glow: "hsl(var(--accent-glow))",
         },
-        success: {
-          DEFAULT: "hsl(var(--success))",
-          foreground: "hsl(var(--success-foreground))",
+        evidence: {
+          DEFAULT: "hsl(var(--evidence))",
+          foreground: "hsl(var(--evidence-foreground))",
+        },
+        clue: {
+          DEFAULT: "hsl(var(--clue))",
+          foreground: "hsl(var(--clue-foreground))",
         },
         warning: {
           DEFAULT: "hsl(var(--warning))",
@@ -66,6 +70,8 @@ export default {
         'gradient-accent': 'var(--gradient-accent)',
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-card': 'var(--gradient-card)',
+        'gradient-crime': 'var(--gradient-crime)',
+        'tape-pattern': 'var(--tape-pattern)',
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
@@ -73,11 +79,16 @@ export default {
         'custom-sm': 'var(--shadow-sm)',
         'custom-md': 'var(--shadow-md)',
         'custom-lg': 'var(--shadow-lg)',
+        'neon-green': 'var(--shadow-neon-green)',
+        'neon-pink': 'var(--shadow-neon-pink)',
+        'neon-yellow': 'var(--shadow-neon-yellow)',
+        'neon-cyan': 'var(--shadow-neon-cyan)',
       },
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
         'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
         'elastic': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        'neon': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -105,6 +116,12 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "neon-pulse": "neon-pulse 2s infinite",
+        "flicker": "flicker 3s infinite",
+        "evidence-float": "evidence-float 4s ease-in-out infinite",
+        "scan": "scan 2s linear infinite",
+        "marker-pulse": "marker-pulse 1.5s infinite",
+        "gradient-shift": "gradient-shift 3s ease-in-out infinite",
       },
     },
   },
