@@ -134,7 +134,12 @@ const PricingSection = () => {
                     <span className="text-3xl font-black">₽{plan.price}</span>
                   </div>
                   <div className="text-sm text-success font-medium">
-                    Скидка {Math.round((1 - parseInt(plan.price.replace(',', '')) / parseInt(plan.originalPrice.replace(',', ''))) * 100)}%
+                    Скидка {(() => {
+                      const price = parseInt(plan.price.replace(',', ''));
+                      const originalPrice = parseInt(plan.originalPrice.replace(',', ''));
+                      if (originalPrice === 0 || isNaN(price) || isNaN(originalPrice)) return '0%';
+                      return Math.round((1 - price / originalPrice) * 100) + '%';
+                    })()}
                   </div>
                 </div>
 
