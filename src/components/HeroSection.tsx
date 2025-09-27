@@ -35,6 +35,7 @@ const HeroSection = () => {
       { setter: setProjectsCount, target: 6, duration: 2000 }
     ];
 
+    const intervals: number[] = [];
     counters.forEach(({ setter, target, duration }) => {
       let start = 0;
       const increment = target / (duration / 16);
@@ -47,7 +48,11 @@ const HeroSection = () => {
           setter(Math.floor(start));
         }
       }, 16);
+      intervals.push(counter as unknown as number);
     });
+    return () => {
+      intervals.forEach((id) => clearInterval(id));
+    };
   }, []);
 
   // Sample data for charts
