@@ -32,6 +32,10 @@
     --accent-foreground: 220 26% 5%;
     --accent-glow: 280 100% 85%;
     
+    /* Success color (used across components) */
+    --success: 140 70% 45%;
+    --success-foreground: 210 40% 98%;
+    
     /* Investigation theme colors */
     --evidence: 60 100% 60%;
     --evidence-foreground: 220 26% 5%;
