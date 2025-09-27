@@ -35,6 +35,8 @@ const HeroSection = () => {
       { setter: setProjectsCount, target: 6, duration: 2000 }
     ];
 
+    const intervals: NodeJS.Timeout[] = [];
+
     counters.forEach(({ setter, target, duration }) => {
       let start = 0;
       const increment = target / (duration / 16);
@@ -47,7 +49,13 @@ const HeroSection = () => {
           setter(Math.floor(start));
         }
       }, 16);
+      intervals.push(counter);
     });
+
+    // Cleanup function to prevent memory leaks
+    return () => {
+      intervals.forEach(interval => clearInterval(interval));
+    };
   }, []);
 
   // Sample data for charts
