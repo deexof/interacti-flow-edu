@@ -174,7 +174,7 @@ function useToast() {
         listeners.splice(index, 1);
       }
     };
-  }, [state]);
+  }, []); // Remove state dependency to prevent multiple listeners
 
   return {
     ...state,
